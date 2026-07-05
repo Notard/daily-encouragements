@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>오늘의 응원</title>
+    <meta
+      name="description"
+      content="매일 아침 새로 쌓이는 한 줄 응원과 그림"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="today-view" aria-live="polite">
+        <div class="copy-panel">
+          <p class="eyebrow" id="dateLabel">오늘의 응원</p>
+          <h1 id="lineText">아침 응원을 불러오는 중입니다.</h1>
+          <p class="note" id="statusText">
+            잠깐만 기다려 주세요. 오늘의 글과 그림을 찾고 있어요.
+          </p>
+        </div>
+        <figure class="art-panel">
+          <img id="dailyImage" alt="" />
+        </figure>
+      </section>
+
+      <section class="archive" aria-labelledby="archiveTitle">
+        <div class="section-heading">
+          <h2 id="archiveTitle">지난 응원</h2>
+          <p id="archiveHint">날짜를 고르면 그날의 글과 그림을 볼 수 있습니다.</p>
+        </div>
+        <div class="archive-list" id="archiveList"></div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
