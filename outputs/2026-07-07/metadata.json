@@ -1,0 +1,13 @@
+{
+  "date": "2026-07-07",
+  "created_at": "2026-07-05T13:58:50.109246+09:00",
+  "mode": "imagegen-character-demo",
+  "line": "한숨 고르고 다시 봐도 늦지 않아요.",
+  "image_prompt": "Cute original character illustration with integrated Korean hand-lettering.",
+  "character_scene": "Generated per date for the gallery demo.",
+  "text_method": "Generated as part of the original image.",
+  "files": {
+    "text": "C:\\프로그래머의 AI 창작 유니버스 구축기\\한빛미디어\\실제동작\\22\\daily-encouragements\\outputs\\2026-07-07\\line.txt",
+    "png": "C:\\프로그래머의 AI 창작 유니버스 구축기\\한빛미디어\\실제동작\\22\\daily-encouragements\\outputs\\2026-07-07\\image.png"
+  }
+}

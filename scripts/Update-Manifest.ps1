@@ -5,6 +5,7 @@ param(
 $ErrorActionPreference = "Stop"
 
 $outputs = Join-Path $Root "outputs"
+$previewDatePath = Join-Path $Root "preview-date.txt"
 $entries = @()
 
 if (Test-Path $outputs) {
@@ -42,6 +43,13 @@ if (Test-Path $outputs) {
 $manifest = [ordered]@{
     updated_at = (Get-Date).ToString("o")
     entries = $entries
+}
+
+if (Test-Path $previewDatePath) {
+    $previewDate = ([System.IO.File]::ReadAllText($previewDatePath, [System.Text.Encoding]::UTF8)).Trim()
+    if ($previewDate -match '^\d{4}-\d{2}-\d{2}$') {
+        $manifest.preview_date = $previewDate
+    }
 }
 
 $json = $manifest | ConvertTo-Json -Depth 8

@@ -1,6 +1,7 @@
 const state = {
   entries: [],
   selected: null,
+  previewDate: null,
 };
 
 const elements = {
@@ -12,6 +13,10 @@ const elements = {
 };
 
 function todayInSeoul() {
+  if (state.previewDate) {
+    return state.previewDate;
+  }
+
   const formatter = new Intl.DateTimeFormat("en-CA", {
     timeZone: "Asia/Seoul",
     year: "numeric",
@@ -104,6 +109,7 @@ async function load() {
     }
 
     const manifest = await response.json();
+    state.previewDate = manifest.preview_date ?? null;
     state.entries = [...(manifest.entries ?? [])].sort((a, b) =>
       b.date.localeCompare(a.date),
     );
