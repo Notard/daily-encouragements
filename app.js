@@ -65,18 +65,31 @@ function renderEntry(entry) {
 }
 
 function renderArchive() {
+  const today = todayInSeoul();
+  const archiveEntries = state.entries.filter((entry) => entry.date !== today);
+
   elements.archiveList.replaceChildren(
-    ...state.entries.map((entry) => {
+    ...archiveEntries.map((entry) => {
       const button = document.createElement("button");
+      const imageWrap = document.createElement("span");
+      const image = document.createElement("img");
+      const copy = document.createElement("span");
       const date = document.createElement("strong");
       const line = document.createElement("span");
 
       button.className = "archive-button";
       button.type = "button";
       button.setAttribute("aria-pressed", String(entry === state.selected));
+      imageWrap.className = "archive-thumb";
+      image.src = entry.image;
+      image.alt = "";
+      image.loading = "lazy";
+      copy.className = "archive-copy";
       date.textContent = entry.date;
       line.textContent = entry.line;
-      button.append(date, line);
+      imageWrap.append(image);
+      copy.append(date, line);
+      button.append(imageWrap, copy);
       button.addEventListener("click", () => renderEntry(entry));
       return button;
     }),

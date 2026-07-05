@@ -131,19 +131,20 @@ h2 {
 
 .archive-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
 }
 
 .archive-button {
-  min-height: 78px;
+  min-height: 260px;
   border: 1px solid rgba(37, 33, 28, 0.14);
   border-radius: 8px;
-  padding: 14px;
+  padding: 0;
   color: var(--ink);
   background: rgba(255, 255, 255, 0.72);
   text-align: left;
   cursor: pointer;
+  overflow: hidden;
   transition:
     transform 160ms ease,
     border-color 160ms ease,
@@ -158,17 +159,36 @@ h2 {
   outline: none;
 }
 
-.archive-button strong,
-.archive-button span {
+.archive-thumb {
+  display: block;
+  aspect-ratio: 4 / 3;
+  background: var(--sky);
+  overflow: hidden;
+}
+
+.archive-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.archive-copy {
+  display: block;
+  padding: 14px;
+}
+
+.archive-copy strong,
+.archive-copy span {
   display: block;
 }
 
-.archive-button strong {
+.archive-copy strong {
   margin-bottom: 8px;
   font-size: 0.9rem;
 }
 
-.archive-button span {
+.archive-copy span {
   color: var(--muted);
   font-size: 0.88rem;
   line-height: 1.4;

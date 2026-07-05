@@ -1,0 +1,13 @@
+{
+  "date": "2026-06-28",
+  "created_at": "2026-07-05T13:48:53.817874+09:00",
+  "mode": "sample-gallery-fill",
+  "line": "마음이 느리면 손도 천천히 가면 돼요.",
+  "image_prompt": "Sample gallery card illustration, theme=leaf",
+  "character_scene": "A small cheerful character sits beside a notebook-style encouragement card.",
+  "text_method": "Rendered into the sample image for gallery preview.",
+  "files": {
+    "text": "C:\\프로그래머의 AI 창작 유니버스 구축기\\한빛미디어\\실제동작\\22\\daily-encouragements\\outputs\\2026-06-28\\line.txt",
+    "png": "C:\\프로그래머의 AI 창작 유니버스 구축기\\한빛미디어\\실제동작\\22\\daily-encouragements\\outputs\\2026-06-28\\image.png"
+  }
+}
